@@ -1,41 +1,46 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 
 export default function GetMoviesComponent() {
-  const [movies, setMovies] = useState([]);
-  const [loading, setLoading] = useState(true);
+    const [movies, setMovies] = useState([]);
 
-  useEffect(() => {
-    const fetchMovies = () => {
-      fetch("https://localhost:7194/api/Movies1")
-        .then((response) => response.json())
+    useEffect(() => {
+        fetch("https://localhost:7194/api/Movies1")
+        .then((responce) => responce.json())
         .then((data) => {
-          console.log(data);
-          setMovies(data);
-          setLoading(false);
+            console.log(data);
+            setMovies(data);
         })
-        .catch((error) => {
-          console.error("Error fetching movies:", error);
-          setLoading(false);
-        });
-    };
+    }, []);
 
-    fetchMovies();
-  }, []);
 
-  return (
-    <div>
-      <h2>MOVIES LIST</h2>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <ul>
-          {movies.map((movie) => (
-            <li key={movie.id}>
-              <b>{movie.title}</b> - {movie.genre} ({movie.releaseDate})
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
+    return (
+        <div>
+          <header>
+            WELCOME TO MOVIE WEBSITE
+          </header>
+          <div>
+            <h1 style={{color:'red'}}>Movies List</h1>
+            <table border={1}style={{margin: 'auto' }}>
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>TITLE</td>
+                        <td>genre</td>
+                        <td>releaseDate</td>
+                    </tr>
+                </thead>
+                <tbody> {
+                    movies.map((item) => (
+                        <tr key={ item.id }>
+                            <td>{item.id}</td>
+                            <td>{ item.title}</td>
+                            <td>{item.genre}</td>
+                            <td>{item.releaseDate}</td>
+                        </tr>
+                    ))
+                } </tbody>
+            </table>
+            </div>
+        </div>
+    );
 }
