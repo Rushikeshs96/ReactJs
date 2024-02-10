@@ -1,46 +1,55 @@
 import React, {useState, useEffect} from "react";
+import Table from 'react-bootstrap/Table';
 
 export default function GetMoviesComponent() {
-    const [movies, setMovies] = useState([]);
+
+    const [movie, setMovie] = useState([]);
 
     useEffect(() => {
-        fetch("https://localhost:7194/api/Movies1")
-        .then((responce) => responce.json())
-        .then((data) => {
+        fetch("https://localhost:7194/api/Movies1").then((resp) => resp.json()).then((data) => {
+            setMovie(data);
             console.log(data);
-            setMovies(data);
         })
-    }, []);
+    }, [])
+
+    // 'https://localhost:7194/api/Movies1/update/1'
+
+    
 
 
     return (
         <div>
-          <header>
-            WELCOME TO MOVIE WEBSITE
-          </header>
-          <div>
-            <h1 style={{color:'red'}}>Movies List</h1>
-            <table border={1}style={{margin: 'auto' }}>
+            <h1>MOVIES</h1>
+            <Table striped bordered hover>
                 <thead>
                     <tr>
-                        <td>ID</td>
-                        <td>TITLE</td>
-                        <td>genre</td>
-                        <td>releaseDate</td>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Genre</th>
+                        <th>ReleaseDate</th>
+                        <th>Update</th>
                     </tr>
                 </thead>
                 <tbody> {
-                    movies.map((item) => (
-                        <tr key={ item.id }>
-                            <td>{item.id}</td>
-                            <td>{ item.title}</td>
-                            <td>{item.genre}</td>
-                            <td>{item.releaseDate}</td>
-                        </tr>
-                    ))
+                    movie.map((item) => <tr key={
+                        item.id
+                    }>
+                        <td>{
+                            item.id
+                        }</td>
+                        <td>{
+                            item.title
+                        }</td>
+                        <td>{
+                            item.genre
+                        }</td>
+                        <td>{
+                            item.releaseDate
+                        }</td>
+                        <td><button primary>Update</button></td>
+                    </tr>)
                 } </tbody>
-            </table>
-            </div>
+            </Table>
         </div>
-    );
+    )
 }
