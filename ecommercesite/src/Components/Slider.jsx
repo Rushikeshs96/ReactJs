@@ -19,7 +19,7 @@ function Slider() {
 
   const preSlide=()=>{
     if(activeSlide===0){
-      setActiveSlide(activeSlide.length-1)
+      setActiveSlide(Slides.length-1)
     }
     else{
       setActiveSlide(activeSlide-1 )
