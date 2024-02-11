@@ -7,12 +7,9 @@ const Footer = () => {
 
     <div className="flex items-center justify-around p-2 mobile:flex-col mobile:items-start">
       <div className="flex-1 flex flex-col flex-wrap p-2">
-        <h1 className="text-[25px]">ZAINKEEPSCODE</h1>
+        <h1 className="text-[25px]">Summer Kings</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
-          soluta quis porro eveniet. Nulla modi, quas unde eaque vel, quaerat
-          repellendus dignissimos iure itaque architecto pariatur quia a eveniet
-          veniam?
+        Experience the Ultimate Summer Style at Summer Kings - Your Premier Destination for Fashion Excellence. Step into the Season in Unmatched Elegance and Confidence, Where Every Wardrobe Reigns Supreme!
         </p>
         <div className="flex items-center justify-center mt-3 self-start">
           <div className={socialStyle + ` bg-blue-700`}>
@@ -34,15 +31,15 @@ const Footer = () => {
       <div className="flex-1 flex flex-col p-2">
         <div className="flex m-3">
             <LocationOnOutlined className="text-[#8a4af3]"/>
-            <p className='pl-3'>State of California</p>
+            <p className='pl-3'>India</p>
         </div>
         <div className="flex m-3">
             <LocalPhoneOutlined className="text-[#521da8]"/>
-            <p className='pl-3'>+92 12345678</p>
+            <p className='pl-3'>+91 xxxxxxxxxx</p>
         </div>
         <div className="flex m-3">
             <EmailOutlined className="text-[#8a4af3]"/>
-            <p className='pl-3'>Ahmadroa925@gmail.com</p>
+            <p className='pl-3'>mail@gmail.com</p>
         </div>
       </div>
     </div>
