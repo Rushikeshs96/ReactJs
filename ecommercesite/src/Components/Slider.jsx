@@ -47,7 +47,7 @@ function Slider() {
                  <div className='des flex flex-col absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-black'>
                 <h2 className='text-[44px]'>{slide.content.h2}</h2>
                 <p className='text-[20px]'>{slide.content.p}</p>
-                <button className='btn ml-20 mr-20'>Shop Now</button>
+                <button className='btn ml-32 mr-32  justify-center items-center'>Shop Now</button>
                </div>
                </div>
             </div>

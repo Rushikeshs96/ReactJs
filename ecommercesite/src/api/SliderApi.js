@@ -14,7 +14,14 @@ export const ApiSlides=[
         }
     },
     {
-        src:"https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src:"https://images.unsplash.com/photo-1606724003282-df6ecad297ce?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        content:{
+            h2:"Avail awesome Deal this Week",
+            p:"Upto 20% off",
+        }
+    },
+    {
+        src:"https://images.unsplash.com/photo-1626497764746-6dc36546b388?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         content:{
             h2:"Avail awesome Deal this Week",
             p:"Upto 20% off",
